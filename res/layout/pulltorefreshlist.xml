@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.markupartist.android.widget.PullToRefreshListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android:list"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    / -->
+    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#D1D1D1" >
+
+<!--     The PullToRefreshListView replaces a standard ListView widget. -->
+
+	<LinearLayout
+	    android:id="@+id/header"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="0.3dp"
+			android:id="@+id/top_title_separator"
+			android:visibility="visible"
+			android:background="@android:color/darker_gray"/>
+	
+		<TextView
+		    android:id="@+id/top_title"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Home"
+		    android:textAppearance="@android:style/TextAppearance.Medium"
+		    android:textColor="#ffffff"
+		    android:textSize="16sp"
+		    android:gravity="center_horizontal"
+		    android:typeface="sans"
+		    android:padding="2dp"
+		    android:background="#D6234A" />
+		
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="0.3dp"
+			android:id="@+id/bottom_title_separator"
+			android:visibility="visible"
+			android:background="@android:color/darker_gray"/>
+    </LinearLayout>
+    
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_below="@id/header">
+	    <com.handmark.pulltorefresh.library.PullToRefreshListView
+	        android:id="@+id/pull_refresh_list"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:cacheColorHint="#00000000"
+	        android:divider="#19000000"
+	        android:dividerHeight="0dp"
+	        android:fadingEdge="none"
+	        android:fastScrollEnabled="true"
+	        android:footerDividersEnabled="false"
+	        android:headerDividersEnabled="false"
+	        android:smoothScrollbar="true"
+	        android:visibility="visible" />
+	
+	
+	    <com.wiznet.mag24gr.controls.ZoomWebView android:id="@+id/webViewMain"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:visibility="gone" />
+    </LinearLayout>
+    
+    <!-- com.wiznet.mag24gr.controls.LoadingWebViewClient android:id="@+id/webViewMainContainer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:visibility="visible"
+	    android:background="#66FFFFFF" /-->
+	    
+
+	<LinearLayout android:id="@+id/loader"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="#D6234A"
+	    android:gravity="center_vertical"
+	    android:visibility="gone"
+	    android:padding="1dp">
+	    
+	    <ProgressBar
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_gravity="center_vertical" />
+	    
+		<TextView
+		    android:id="@+id/loaderTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Loading: Home"
+		    android:textAppearance="@android:style/TextAppearance.Medium"
+		    android:textColor="#ffffff"
+		    android:textSize="16sp"
+		    android:typeface="sans"
+		    android:padding="2dp" />
+	    
+	</LinearLayout>
+    
+
+</RelativeLayout>
+    
+<!-- FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/pull_to_refresh_listview"
+        android:name="com.handmark.pulltorefresh.extras.listfragment.PullToRefreshListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout -->

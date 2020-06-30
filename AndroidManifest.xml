@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wiznet.mag24gr"
+    android:versionCode="1"
+    android:versionName="1.0 beta" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ExampleTheme"
+        android:name=".MagApp">
+        
+		<activity
+            android:name=".Splash"
+            android:noHistory="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <!-- action android:name="android.intent.action.MAIN" /-->
+                <!-- category android:name="android.intent.category.LAUNCHER" /-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExMainActivityAnim"
+            android:label="@string/app_name" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.keyes.youtube.OpenYouTubePlayerActivity"></activity>
+        <activity android:name=".MagImagePagerView"></activity>
+        <activity android:name=".MagMainArticleView"></activity>
+        <activity android:name=".MagAgendaEventView"></activity>
+        <activity android:name=".MagAboutView"></activity>
+    </application>
+    
+</manifest>

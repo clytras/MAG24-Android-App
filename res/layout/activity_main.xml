@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity" >
+
+    <!-- TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" /-->
+        
+    <!--
+    The PullToRefreshListView replaces a standard ListView widget.
+    -->
+    
+    
+	<com.slidingmenu.lib.SlidingMenu
+	    xmlns:sliding="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/slidingmenulayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    sliding:viewAbove="@layout/testing"
+	    sliding:viewBehind="@layout/testing_two"
+	    sliding:touchModeAbove="margin"
+	    sliding:behindWidth="@dimen/shadow_width"
+	    sliding:behindScrollScale="0.5"
+	    sliding:shadowDrawable="@drawable/shadow"
+	    sliding:shadowWidth="@dimen/shadow_width"
+	    sliding:fadeEnabled="true"
+	    sliding:selectorEnabled="true"/>
+    
+    
+    <com.markupartist.android.widget.PullToRefreshListView
+        android:id="@+id/android:list"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        />
+    
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58px"
+        android:layout_height="45px"
+        android:layout_width="200px"
+        android:id="@+id/lin_progress_bar"
+        android:visibility="invisible">
+        <ProgressBar android:id="@+id/ProgressBar01"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"></ProgressBar>
+        <TextView android:id="@+id/TextView01" android:layout_height="fill_parent"
+            android:layout_width="fill_parent" android:gravity="center_vertical"
+            android:textStyle="bold" android:text="Loading..."
+            android:layout_marginLeft="10px" android:textSize="23px"
+            android:textColor="#808080"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    
+	<!-- Title Of Song-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready Or Not Party στο People Cafe"
+        android:textColor="#777777"
+        android:typeface="sans" 
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+
+	<!-- Artist Name -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:textColor="#2A7FFF"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip"
+        android:text="Tomorrow" />
+
+	<!-- Rightend Duration -->
+    <TextView
+        android:id="@+id/venue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:text="People Lounge"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip"
+        android:textColor="#666666"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

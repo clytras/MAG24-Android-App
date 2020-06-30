@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="140dp"
+	android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+
+        android:background="@drawable/image_bg" >
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/no_image" />
+        
+        
+        
+    </LinearLayout>
+
+    <!-- Title Of Song -->
+
+
+    <!-- Artist Name -->
+
+    <!-- ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow" /-->
+
+    <RelativeLayout
+        android:id="@+id/topitem_ph"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dp"
+        android:background="#6AFFFFFF"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+	    <com.wiznet.mag24gr.EllipsizingTextView
+	        android:id="@+id/title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="6dp"
+	        android:layout_marginRight="16dp"
+	        android:text="Rihanna Love the way lie"
+	        android:textColor="#040404"
+	        android:textSize="13sp"
+            android:lines="2"
+            android:maxLines="2"
+	        android:textStyle="bold"
+	        android:typeface="sans"
+	        android:ellipsize="end" />
+
+        <com.wiznet.mag24gr.EllipsizingTextView
+            android:id="@+id/introtext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:ellipsize="end"
+            android:lines="3"
+            android:maxLines="3"
+            android:text="I have hide the actionbar but how can i use the toggle() from fragments? Can anyone give me idea that how can i use android.R.id.home action from fragment instead of fragmentActivity?"
+            android:textColor="#171717"
+            android:textSize="12sp"
+            android:typeface="sans" />
+    
+	</RelativeLayout>
+
+    <!-- TextView
+        android:id="@+id/artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/thumbnail"
+        android:layout_alignParentBottom="true"
+        android:text="Just gona stand there and ..."
+        android:textColor="#343434"
+        android:textSize="10dip" /-->
+
+</RelativeLayout>
